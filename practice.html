@@ -8,6 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
+body {
+            background: linear-gradient(120deg, rgb(91, 15, 121), rgb(0, 0, 0), rgb(91, 15, 121));
+        }
+    
   @media (max-width: 767px) {
 .custom-height {
 height: 2400px;
@@ -19,9 +23,7 @@ height: 2400px;
 height: 1600px;
 }
 }
-body {
-            background: linear-gradient(120deg, rgb(91, 15, 121), rgb(0, 0, 0), rgb(91, 15, 121));
-        }
+
 @media (max-width: 767px) {
               .custom-padding {
                 padding-top: 86.5rem;
@@ -29,16 +31,7 @@ body {
             }
             
 </style>
-    <style>
-    @media (max-width: 768px) {
-      .input-pol {
-        margin-top: 1300px;
-      }
-      .p-input {
-        margin-top: 70px;
-      }
-    }
-  </style>
+
 <body class="min-h-screen bg-black background: linear-gradient(90deg, rgba(62, 90, 200, 1), rgba(255, 175, 199, 1));
 ">
 
@@ -264,9 +257,20 @@ class="flex relative flex-col custom-height items-center self-center px-20 w-ful
 <!-- Main Section Ends Here -->
 
 <!-- Main Section Ends Here -->
+<style>
+    @media (max-width: 768px) {
+      .input-pol {
+        margin-top: 1300px;
+      }
+      .p-input {
+        margin-top: 70px;
+      }
+    }
+  </style>
+  
 
           <!-- Here the third Section Starts -->
-          <div class="flex input-pol custom-padding gap-3 mt-5 justify-center self-center py-5 w-full">
+          <div class="flex input-pol custom-padding gap-3 mt-5 justify-center self-center py-5 w-full mb-5">
             <div
               class="flex flex-col mt-5 flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full"
             >
@@ -291,7 +295,7 @@ class="flex relative flex-col custom-height items-center self-center px-20 w-ful
                 
               </form>
               <p
-                class="self-center p-input mt-3 text-xs leading-snug text-center text-indigo-500 underline max-md:max-w-full"
+                class="self-center mt-5 p-input text-xs leading-snug text-center text-indigo-500 underline max-md:max-w-full "
               >
                 Our Al offers guidance but is not a substitute for professional
                 therapy or medical advice.
