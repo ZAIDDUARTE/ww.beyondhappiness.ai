@@ -273,46 +273,79 @@ border: 1px solid var(--Neutral-700, #374151);"
 
   
 
-          <!-- Here the third Section Starts -->
-          <div class="flex input-pol custom-padding gap-3  justify-center self-center py-5 w-full mb-5">
-            <div
-              class="flex flex-col  flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full"
-            >
-              <form
-                class="flex flex-wrap  gap-3 w-full min-h-[60px] max-md:max-w-full"
-              >
-                <label for="messageInput" class="sr-only"
-                  >Type your message here</label
-                >
+         <div class="flex input-pol custom-padding gap-3 justify-center self-center py-5 w-full mb-5">
+            <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
+              <form class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full">
+                <label for="messageInput" class="sr-only">Type your message here</label>
                 <input
                   id="messageInput"
                   type="text"
                   placeholder="Type your message here…"
                   class="flex flex-wrap flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border-solid basis-4 min-w-[240px] max-md:max-w-full"
                 />
-                <a
-                href="/chat.html"
-                class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid"
-              >
-                Send
-              </a>
-                
+                <button type="button" id="speechToTextBtn" class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                  🎤
+                </button>
+                <button type="button" id="textToSpeechBtn" class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                  🔊
+                </button>
+                <a href="/chat.html" class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                  Send
+                </a>
               </form>
-              <p
-                class="self-center mt-20 p-input text-xs leading-snug text-center text-white max-md:max-w-full "
-              >
-                Our Al offers guidance but is not a substitute for professional
-                therapy or medical advice.
-                <a href="#learn-more" class="text-indigo-500 underline"
-                  >Learn more about our limitations here.</a
-                >
+              <p class="self-center mt-20 p-input text-xs leading-snug text-center text-white max-md:max-w-full">
+                Our AI offers guidance but is not a substitute for professional therapy or medical advice.
+                <a href="#learn-more" class="text-indigo-500 underline">Learn more about our limitations here.</a>
               </p>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-  </section>
+          
+          <script>
+            const messageInput = document.getElementById('messageInput');
+            const speechToTextBtn = document.getElementById('speechToTextBtn');
+            const textToSpeechBtn = document.getElementById('textToSpeechBtn');
+          
+            // Check for browser compatibility
+            if ('webkitSpeechRecognition' in window) {
+              const recognition = new webkitSpeechRecognition();
+              recognition.continuous = false;
+              recognition.interimResults = false;
+          
+              // Start recognition when button is clicked
+              speechToTextBtn.addEventListener('click', () => {
+                recognition.start();
+                console.log("Listening..."); // Log for troubleshooting
+              });
+          
+              recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                messageInput.value = transcript;
+                console.log("Result received: ", transcript); // Log the result
+              };
+          
+              recognition.onerror = (event) => {
+                console.error('Speech recognition error', event.error);
+              };
+          
+              recognition.onend = () => {
+                console.log("Recognition service has stopped."); // Log when recognition stops
+              };
+            } else {
+              console.error('Speech recognition not supported in this browser.');
+              speechToTextBtn.disabled = true; // Disable button if not supported
+            }
+          
+            // Text to Speech functionality
+            textToSpeechBtn.addEventListener('click', () => {
+              const text = messageInput.value;
+              if (text) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(utterance);
+              }
+            });
+          </script>
+          
+          
 
   
   
