@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(102deg, rgb(0, 0, 0), rgb(91, 15, 121), rgb(0, 0, 0));
+            font-family: 'Inter', sans-serif;
+        }
+        #user-chat {
+            border-radius: 16px;
+            border: 1px solid #EFEFEF;
+            background: #F3F4F6;
+        }
+        #bot-chat {
+            color: #111827;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black">
+
+    <!-- Navbar starts here -->
+    <section class="flex flex-col items-center text-center rounded-xl">
+        <div class="flex relative flex-col pb-5 w-full min-h-[1024px]">
+            <header class="flex relative flex-col justify-center px-8 py-4 w-full text-base font-medium leading-none text-center min-h-[80px]">
+                <div class="flex flex-wrap gap-10 justify-between items-center w-full">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9d52b2a8e42c0582bd1dda9bc3c6074f6eb4a7b7d517e175a0224628814d90b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Logo" class="object-contain shrink-0 ps-5 ms-4 self-stretch my-auto aspect-[3.39] w-[180px]" />
+                    <nav class="flex gap-2.5 items-center self-stretch my-auto min-w-[240px]">
+                        <a href="#" class="px-5 py-3.5 text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500">Login</a>
+                        <a href="#" class="px-5 py-3.5 text-indigo-500 bg-white rounded-lg border border-indigo-500">Create an Account</a>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- Chat Section Starts Here -->
+            <main class="flex relative flex-col items-center self-center px-20 w-full bg-gray-50 rounded-2xl max-w-[1400px]">
+                <div class="flex flex-col w-full max-w-[1244px] mx-auto">
+                    <section class="flex flex-col pt-36 pb-8 w-full text-base text-gray-900 min-h-[814px]" id="chat-container">
+                        <!-- Chat Messages will be appended here -->
+                    </section>
+                    <!-- Input Section -->
+                    <section class="flex items-center justify-between w-full p-4 bg-white rounded-lg">
+                        <input type="text" id="user-input" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none" placeholder="Type your message here..." />
+                        <button id="send-btn" class="ml-4 px-4 py-2 bg-indigo-500 text-white rounded-lg">Send</button>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script>
+        const chatContainer = document.getElementById('chat-container');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        // Function to append chat messages
+        function appendMessage(content, isBot = false) {
+            const messageWrapper = document.createElement('div');
+            messageWrapper.className = `flex flex-wrap gap-3 items-start ${isBot ? 'self-start' : 'justify-end'} mt-8 w-full`;
+
+            const messageContent = document.createElement('p');
+            messageContent.className = `flex flex-col justify-center px-6 py-4 ${isBot ? 'bg-transparent' : 'bg-gray-100'} rounded-2xl max-w-[760px] min-w-[240px] w-auto ${isBot ? 'text-left' : 'text-right'}`;
+            messageContent.textContent = content;
+
+            messageWrapper.appendChild(messageContent);
+
+            // If it's bot's message, add avatar
+            if (isBot) {
+                const botAvatar = document.createElement('img');
+                botAvatar.src = 'https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85';
+                botAvatar.className = 'object-contain shrink-0 aspect-square w-[46px]';
+                messageWrapper.prepend(botAvatar);
+            }
+
+            chatContainer.appendChild(messageWrapper);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Send button click event
+        sendBtn.addEventListener('click', function() {
+            const userMessage = userInput.value.trim();
+            if (userMessage) {
+                // Append user message
+                appendMessage(userMessage);
+
+                // Clear input field
+                userInput.value = '';
+
+                // Simulate bot reply
+                setTimeout(() => {
+                    appendMessage('OK', true);
+                }, 500); // Bot replies after 500ms
+            }
+        });
+
+        // Enter key triggers send
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
