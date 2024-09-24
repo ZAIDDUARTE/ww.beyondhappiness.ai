@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<style>
+    body {
+       background-image: url(/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
+       background-size: cover;
+       background-position: center;
+       z-index: 1000;
+    }
+  </style>
+
+    <section class="flex overflow-hidden flex-col">
+        <div class="flex relative flex-col pb-5 w-full min-h-[1024px] max-md:max-w-full">
+          <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
+          <header class="flex relative flex-col justify-center px-8 py-4 w-full min-h-[80px] max-md:px-5 max-md:max-w-full">
+            <div class="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[129px]" />
+              <nav class="flex gap-2.5 items-center self-stretch my-auto min-w-[240px]">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Navigation Icon" class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]" />
+                <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid">
+                  Upgrade
+                </button>
+                <button style="z-index: 1000;" id="mobile-menu-btn" class="flex  justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[46px]" aria-label="User Menu">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-5 aspect-square" />
+                </button>
+              </nav>
+            </div>
+          </header>
+          <main class="flex relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full">
+
+
+
+<aside id="mobile-sidebar" class="fixed inset-y-0 left-0 z-40 bg-gray-100 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:relative">
+  <!-- Sidebar container with scroll functionality for all screen sizes -->
+  <div class="flex flex-col w-[100%] ml-0 h-full ">
+    <div class="flex relative max-md:mt-7">
+      <nav class="flex flex-auto gap-1 self-start py-3 pr-4 pl-2 mr-0 bg-gray-100 border-r border-solid min-h-[924px] rounded-l-xl">
+        <div class="flex flex-col justify-between w-[46px] max-md:hidden">
+          <div class="flex flex-col w-full">
+            <div class="flex flex-col justify-center w-full">
+              <div class="flex flex-col justify-center items-center px-2.5 py-4 w-full max-w-[46px] min-h-[32px]">
+                <div class="flex gap-1 min-h-[3px]"></div>
+              </div>
+              <h2 class="self-start text-xs font-semibold leading-snug text-center text-gray-900">
+                Menu
+              </h2>
+            </div>
+            <div class="flex flex-col justify-center mt-2.5 w-full">
+              <div class="flex overflow-hidden gap-2.5 justify-center items-center px-px min-h-[32px] w-[46px]">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/42bd720ba50f75d7496a365240cc6dba6168a8d5c6b0c2cead159e578b55551b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="History icon" class="object-contain self-stretch my-auto w-5 aspect-[0.91]" />
+              </div>
+              <h2 class="self-start text-xs font-semibold leading-snug text-center text-gray-900">
+                History
+              </h2>
+            </div>
+            <div class="flex flex-col justify-center mt-2.5 w-full">
+              <div class="flex gap-2.5 justify-center items-center min-h-[32px] w-[46px]">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/387bcf3f5c8409b3d889c832e300707803c42b682871a847eec85d232884b099?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Explore icon" class="object-contain self-stretch my-auto aspect-square w-[22px]" />
+              </div>
+              <h2 class="self-start text-xs font-semibold leading-snug text-center text-gray-900">
+                Explore
+              </h2>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center mt-[668px] w-[46px] max-md:mt-10">
+            <div class="flex flex-col justify-center items-center w-full min-h-[32px]">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f17af50e5b09736f32e4c5b2b689eebdfa66b00f8f9495cc982a63d2fa68ed6?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Anonymous mode icon" class="object-contain aspect-[1.22] w-[22px]" />
+            </div>
+            <h2 class="text-xs font-semibold leading-4 text-center text-gray-900">
+              Anonymous Mode
+            </h2>
+          </div>
+        </div>
+      
+            
+
+
+      </nav>
+    </div>
+  </div>
+</aside>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="fixed inset-0 bg-black opacity-50 z-30 hidden md:hidden"></div>
+
+<!-- JavaScript -->
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileSidebar = document.getElementById('mobile-sidebar');
+  const overlay = document.getElementById('overlay');
+
+  // Toggle the sidebar and overlay on button click
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileSidebar.classList.toggle('-translate-x-full');
+    overlay.classList.toggle('hidden');
+  });
+
+  // Hide sidebar and overlay when clicking on the overlay
+  overlay.addEventListener('click', () => {
+    mobileSidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  });
+</script>
+
+                  <section class="flex  flex-col grow shrink-0 items-center px-20 bg-gray-50 rounded-none basis-0 w-fit max-md:px-5 max-md:max-w-full">
+                    <div  class="flex flex-col w-full max-w-[1244px] max-md:max-w-full mx-auto">
+                      <section
+                        class="flex flex-col overflow-y-auto  w-full text-base text-gray-900  max-md:pt-24 max-md:max-w-full"
+                      >
+                        <!-- User Message (Right Aligned) -->
+                        <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
+                           <p style="width: 647px;"
+                           class="flex flex-col text-right  py-4 bg-transparent rounded-2xl "
+                         >
+                            I want to understand what the first step toward enlightenment is.
+                          </p>
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="User avatar"
+                            class="object-contain "
+                          />
+                        </div>
+                    
+                        <!-- Bot Message (Left Aligned) -->
+                        <div class="flex  gap-5 items-start self-start mt-8 w-full max-md:max-w-full">
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="AI avatar"
+                            class="object-contain shrink-0 "
+                          />
+                          <p style="width: 647px;"
+                            class="flex flex-col text-left  py-4 bg-transparent rounded-2xl "
+                          >
+                            The first step toward enlightenment is often self-awareness. It involves recognizing your thoughts, emotions, and actions without judgment. Would you like to explore ways to cultivate this awareness?
+                          </p>
+                        </div>
+                    
+                        <!-- User Message (Right Aligned) -->
+                        <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
+                           <p style="width: 647px;"
+                           class="flex flex-col text-right  py-4 bg-transparent rounded-2xl "
+                         >
+                            Yes, how can I become more self-aware?
+                          </p>
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="User avatar"
+                            class="object-contain shrink-0 "
+                          />
+                        </div>
+                    
+                        <!-- Bot Message (Left Aligned) -->
+                        <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
+                          <img style="width: 46px;
+                          height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="AI avatar"
+                            class="object-contain shrink-0 "
+                          />
+                          <p style="width: 647px;"
+                          class="flex flex-col text-left  py-4 bg-transparent rounded-2xl "
+                        >
+                            A great way to start is with mindfulness meditation. By focusing on your breath and observing your thoughts, you can become more aware of the present moment. Would you like a guided meditation session?
+                          </p>
+                        </div>
+                    
+                        <!-- User Message (Right Aligned) -->
+                        <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
+                           <p style="width: 647px;"
+                           class="flex flex-col text-right  py-4 bg-transparent rounded-2xl "
+                         >
+                            Sure, I've never meditated before, though. Is it difficult?
+                          </p>
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="User avatar"
+                            class="object-contain shrink-0 "
+                          />
+                        </div>
+                    
+                        <!-- Bot Message (Left Aligned) -->
+                        <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="AI avatar"
+                            class="object-contain shrink-0 vertical-center"
+                          />
+                          <p style="width: 647px;"
+                            class="flex flex-col text-left  py-4 bg-transparent rounded-2xl "
+                          >
+                            Not at all! Meditation is about being present, not perfect. Start by sitting comfortably, close your eyes, and focus on your breathing. When your mind wanders, gently bring it back to your breath.
+                          </p>
+                        </div>
+                    
+                        <!-- User Message (Right Aligned) -->
+                        <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
+                           <p style="width: 647px;"
+                           class="flex flex-col text-right  py-4 bg-transparent rounded-2xl "
+                         >
+                            That sounds good. Let's try it.
+                          </p>
+                          <img style="width: 46px;
+               height: 46px;"
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                            alt="User avatar"
+                            class="object-contain shrink-0"
+                          />
+                        </div>
+                      </section>
+                    </div>
+                          
+               
+                        <!-- Main Section Ends Here -->
+                           
+               
+               
+                 
+               
+                         <!-- Here the third Section Starts -->
+                         <div class="flex input-pol custom-padding gap-3  justify-center self-center py-5 w-full ">
+                           <div
+                             class="flex flex-col mt-5 flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full"
+                           >
+                             <form
+                               class="flex flex-wrap mt-5 gap-3 w-full min-h-[60px] max-md:max-w-full"
+                             >
+                               <label for="messageInput" class="sr-only"
+                                 >Type your message here</label
+                               >
+                               <input
+                                 id="messageInput"
+                                 type="text"
+                                 placeholder="Type your message here…"
+                                 class="flex flex-wrap flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border-solid basis-4 min-w-[240px] max-md:max-w-full"
+                               />
+                               <a
+                               href="/chat.html"
+                               class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid"
+                             >
+                               Send
+                             </a>
+                               
+                             </form>
+                             <p
+                               class="self-center pt-20 md:pt-0 mt-20 md:mt-0 mt-2 p-input text-xs leading-snug text-center text-dark max-md:max-w-full "
+                             >
+                               Our Al offers guidance but is not a substitute for professional
+                               therapy or medical advice.
+                               <a href="#learn-more" class="text-indigo-500 underline"
+                                 >Learn more about our limitations here.</a
+                               >
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                  </section>
+                  </div>
+                  
+                </nav>
+         
+          </main>
+          
+        </div>
+      </section>
+</body>
+</html>
