@@ -3,305 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<style>
-
-body {
-            background: linear-gradient(102deg, rgb(0, 0, 0), rgb(0, 0, 0), rgb(91, 15, 121), rgb(91, 15, 121), rgb(0, 0, 0), rgb(0, 0, 0), rgb(22, 9, 27));
-            font-family: inter;
-            
-            
+    <title>API Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Courier+New:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Main font */
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
-</style>
-<body class=" bg-black background: linear-gradient(90deg, rgba(62, 90, 200, 1), rgba(255, 175, 199, 1));
-">
+        h1 {
+            color: #333;
+        }
 
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 100px;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: none;
+        }
 
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
 
-         <!-- Navbar starts here -->
-    <section class="flex flex-col items-center text-center rounded-xl">
-    <div
-      class="flex relative flex-col pb-5 w-full min-h-[1024px] max-md:max-w-full"
-    >
-    <img style="opacity: 0.2; background-size: cover;"
-    loading="lazy"
-    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bcbe47f8ccec511863c338cef60b86167bbca566b04476d6e0f5b9e66f77bde?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-    alt=""
-    class="object-cover absolute inset-0 w-full  opacity-15 md:object-contain md:max-w-full md:max-h-full"
-  />
+        button:hover {
+            background-color: #0056b3;
+        }
 
-      <header
-        class="flex relative flex-col justify-center px-8 py-4 w-full text-base font-medium leading-none text-center min-h-[80px] max-md:px-5 max-md:max-w-full"
-      >
-        <div
-          class="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full"
-        >
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9d52b2a8e42c0582bd1dda9bc3c6074f6eb4a7b7d517e175a0224628814d90b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-            alt="Beyond Happiness Logo"
-            class="object-contain shrink-0 ps-5 ms-4 self-stretch my-auto aspect-[3.39] w-[180px]"
-          />
-          <nav
-            class="flex gap-2.5 items-center self-stretch my-auto min-w-[240px]"
-          >
-            <a
-              href="/dark.html"
-              class="gap-2 self-stretch px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid"
-            >
-              Login
-            </a>
-            <a
-              href="#create-account"
-              class="overflow-hidden me-5 gap-2 self-stretch px-5 py-3.5 my-auto text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid"
-            >
-              Create a Account
-            </a>
-           
-          </nav>
-        </div>
-      </header>
+        h2 {
+            color: #333;
+        }
 
+        pre {
+            font-family: 'Courier New', monospace; /* Font for response text */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            max-width: 600px;
+            width: 100%;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Ensure long text wraps */
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Beyond Happiness API</h1>
+    <textarea id="query" placeholder="Enter your query here..."></textarea><br>
+    <button id="send">Send Request</button>
+    <h2>Response:</h2>
+    <pre id="response"></pre>
 
+    <script>
+        document.getElementById('send').onclick = async () => {
+            const query = document.getElementById('query').value;
+            const responseArea = document.getElementById('response');
+            responseArea.textContent = 'Loading...';
 
-
-      <!-- Main Section Starts Here -->
-      
-     <main 
-      class="flex mx-10 relative flex-col custom-height items-center self-center px-20 bg-gray-50 rounded-2xl max-w-[1400px] w-full md:w-11/12"
-    >
-        <div class="flex flex-col w-full max-w-[1044px] max-md:max-w-full">
-          <div class="flex flex-col pt-20 w-full h-[814px] max-md:max-w-full">
-            <div class="flex flex-col w-full max-md:max-w-full">
-              <section
-                class="flex flex-col items-center w-full text-center text-gray-900 max-md:max-w-full"
-              >
-              <h1
-              class="text-4xl font-medium leading-[48px] text-center tracking-tight"
-              style="color: var(--Neutral-900, #111827); font-family: Inter; letter-spacing: -0.8px;"
-            >
-              Navigate Stress, Boost Confidence, and Gain <br />
-              Emotional Clarity with Beyond Happiness
-            </h1>
-            
-                <p class="mt-2 text-base max-md:max-w-full">
-                  Your Ultimate Emotional Support Companion
-                </p>
-              </section>
-              <section class="flex flex-col mt-8 w-full max-md:max-w-full">
-                <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
-                  <article
-                    class="flex flex-col flex-1 shrink justify-center items-center px-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid aspect-square basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5"
-                  >
-                    <div class="flex flex-col p-5 ps-5 w-full">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c14428a764c6a052b8ca6afa883990e8eff674be1491ebebe878b6a77b2713b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                        alt=""
-                        class="object-contain w-8 aspect-square"
-                      />
-                      <h2
-                        class="mt-3 text-lg text-left font-semibold tracking-tight leading-7 text-gray-50"
-                      >
-                        Flexible, Personalized Check-Ins Anytime, Anywhere
-                      </h2>
-                      <p class="mt-3 text-left text-base leading-6 text-indigo-200">
-                        Stay connected on your terms. Our AI offers
-                        hyper-personalized, judgment-free check-ins that adapt to
-                        your needs—morning, midday, or night—providing support
-                        that feels uniquely yours.
-                      </p>
-                    </div>
-                  </article>
-                  <article
-                    class="flex flex-col flex-1 shrink justify-center items-center px-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid aspect-square basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5"
-                  >
-                    <div class="flex flex-col ps-5 w-full">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                        alt=""
-                        class="object-contain w-8 aspect-square"
-                      />
-                      <h2
-                        class="mt-3 text-lg font-semibold text-left tracking-tight leading-7 text-gray-50"
-                      >
-                        Empathetic Conversations That <br> Evolve With You
-                      </h2>
-                      <p class="mt-3 text-base leading-6 text-left text-indigo-200">
-                        Experience AI-driven support that adapts in real-time,
-                        mirroring your emotions and offering guidance that truly
-                        understands. Beyond Happiness feels like a trusted
-                        companion, not a chatbot.
-                      </p>
-                    </div>
-                  </article>
-                  <article
-                    class="flex flex-col flex-1 shrink justify-center items-center px-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid aspect-square basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5"
-                  >
-                    <div class="flex flex-col ps-5 w-full">
-                      <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                        alt=""
-                        class="object-contain w-8 aspect-square"
-                      />
-                      <h2
-                        class="mt-3 text-lg font-semibold tracking-tight text-left leading-7 text-gray-50"
-                      >
-                        24/7 On-Demand Emotional <br />
-                        Tools
-                      </h2>
-                      <p class="mt-3 text-left text-base leading-6 text-indigo-200">
-                        Access unmatched emotional support anytime. Beyond
-                        Happiness anticipates your needs with scenario-based
-                        problem solving, real-time crisis intervention, and
-                        proactive guidance, continuously learning to better
-                        support your journey.
-                      </p>
-                    </div>
-                  </article>
-                  
-                </div>
-              </section>
-
-
-
-              <!-- Second Section Starts Here -->
-              <section class="flex flex-col mt-8 w-full max-md:max-w-full">
-                <h2
-                  class="text-lg font-medium tracking-tight text-left leading-loose text-gray-400 max-md:max-w-full"
-                >
-                  Start by asking...
-                </h2>
-                <div
-                  class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full"
-                >
-                  <div
-                    class="flex flex-wrap gap-4 justify-center items-start w-full max-md:max-w-full"
-                  >
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      How can I cultivate a sense of belonging even when I feel
-                      disconnected?
-                    </p>
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      What are gentle ways to begin healing from emotional pain
-                      and trauma?
-                    </p>
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      How can I regain a sense of control when life feels
-                      overwhelming?
-                    </p>
-                  </div>
-                  <div
-                    class="flex text-left flex-wrap gap-4 mb-5 justify-center items-start mt-4 w-full max-md:max-w-full"
-                  >
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      What are some mindfulness techniques to quiet my racing
-                      thoughts?
-                    </p>
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      How can I build resilience against emotions that feel
-                      overwhelming?
-                    </p>
-                    <p
-                      class="flex text-left flex-col flex-1 shrink justify-center self-stretch p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      How can I turn my stress into opportunities for personal
-                      growth?
-                    </p>
-                  </div>
-                  <!-- <div
-                    class="flex flex-wrap gap-4 justify-center items-start mt-4 w-full max-md:max-w-full"
-                  >
-                    <p
-                      class="flex flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      What are the best ways to create meaningful connections in
-                      my current environment?
-                    </p>
-                    <p
-                      class="flex flex-col flex-1 shrink justify-center p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      How can I set healthy boundaries without feeling selfish?
-                    </p>
-                    <p
-                      class="flex flex-col flex-1 shrink justify-center self-stretch p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]"
-                    >
-                      What are immediate techniques to calm my mind during an
-                      anxiety attack?
-                    </p>
-                  </div> -->
-                </div>
-              </section>
-            </div>
-          </div>
-            
-
-
-  
-
-          <!-- Here the third Section Starts -->
-          <div class="flex input-pol custom-padding gap-3 mt-5 justify-center self-center py-5 w-full mb-5">
-            <div
-              class="flex flex-col mt-5 flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full"
-            >
-              <form
-                class="flex flex-wrap mt-5 gap-3 w-full min-h-[60px] max-md:max-w-full"
-              >
-                <label for="messageInput" class="sr-only"
-                  >Type your message here</label
-                >
-                <input
-                  id="messageInput"
-                  type="text"
-                  placeholder="Type your message here…"
-                  class="flex flex-wrap flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border-solid basis-4 min-w-[240px] max-md:max-w-full"
-                />
-                <a
-                href="/chat.html"
-                class="gap-2 self-stretch mb-5 px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid"
-              >
-                Send
-              </a>
+            try {
+                const response = await fetch('http://localhost:3000/api/request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query })
+                });
                 
-              </form>
-              <p
-                class="self-center mt-20 p-input text-xs leading-snug text-center text-dark max-md:max-w-full "
-              >
-                Our Al offers guidance but is not a substitute for professional
-                therapy or medical advice.
-                <a href="#learn-more" class="text-indigo-500 underline"
-                  >Learn more about our limitations here.</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </section>
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
 
-  
-  
+                const data = await response.json();
+                // Display only the response content
+                responseArea.textContent = data.response || 'No response content available.';
+            } catch (error) {
+                responseArea.textContent = `Error: ${error.message}`;
+            }
+        };
+    </script>
 </body>
 </html>
