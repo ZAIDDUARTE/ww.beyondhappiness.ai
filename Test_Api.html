@@ -9,7 +9,7 @@
 <body>
     <style>
         body {
-           background-image: url(/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
+           background-image: url(/assests/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
            background-size: cover;
            background-position: center;
            overflow-y: hidden;
@@ -86,78 +86,73 @@
 
 
           
-              <main class="flex relative border rounded-2xl flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full h-[700px] max-h-[800px] overflow-y-auto">
+              <main class="flex relative border rounded-2xl flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full h-[700px] max-h-[800px] ">
 
 
 
 
-                <section class="flex flex-col grow shrink-0 items-center px-20 bg-gray-50 border rounded-2xl basis-0 w-fit max-md:px-5 max-md:max-w-full  ">
-                    <div  class="flex flex-col w-full max-w-[1244px] max-md:max-w-full mx-auto">
+                <section class="flex flex-col grow shrink-0 items-center px-20 bg-gray-50 border rounded-2xl basis-0 w-fit max-md:px-5 max-md:max-w-full">
+                  <div class="flex flex-col w-full max-w-[1244px] max-md:max-w-full mx-auto">
                       <section id="chatContainer"
-    class="flex flex-col  w-full text-base text-gray-900 max-md:pt-24 max-md:max-w-full"
-    >
-                    
-                    
-                        <!-- Bot Message (Left Aligned) -->
-<div class="flex gap-5 items-left self-left my-8 w-full max-md:max-w-full">
-  <img
-      style="width: 46px; height: 46px;"
-      loading="lazy"
-      src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-      alt="AI avatar"
-      class="object-contain shrink-0 vertical-center"
-  />
-  <p
-      style="width: 647px;"
-      id="response"
-      class="flex flex-col text-left py-4 bg-transparent rounded-2xl"
-  >
-  </p>
-</div>
-<style>.typing {
-  display: inline-block;
-  overflow: hidden; /* Ensures no overflow */
-  white-space: nowrap; /* Prevents text from wrapping */
-  border-right: .1em solid; /* Creates a cursor effect */
-  animation: blink-caret 0.75s step-end infinite; /* Cursor blinking effect */
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; } /* Adjust the color to match your theme */
-}
-</style>
-                    
-                      
+                          class="flex flex-col w-full text-base text-gray-900 max-md:pt-24 max-md:max-w-full"
+                          style="max-height: 700px; overflow-y: auto;"> <!-- Added styles here -->
                           
-               
-                  
-               
-                         <!-- Here the third Section Starts -->
-                         <div class="flex mt-20 pt-80  gap-3 justify-center self-center py-3 w-full ">
-                          <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
-                            <div class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full md:mb-0">
-                              <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
-                              <input  id="query" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
-                              <button id="send" type="submit" class="ml-2 gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
-                                Send
-                            </button>
-                             
-                            </div>
-                            <p class="self-center mt-20 md:mt-5 pt-20 md:pt-0 mt-5 text-xs leading-snug text-center  max-md:max-w-full">
-                              Our Al offers guidance but is not a substitute for professional therapy or medical advice.
-                              <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
-                            </p>
+                          <!-- Bot Message (Left Aligned) -->
+                          <div class="flex gap-5 items-left self-left my-8 w-full max-md:max-w-full">
+                              <img
+                                  style="width: 46px; height: 46px;"
+                                  loading="lazy"
+                                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                                  alt="AI avatar"
+                                  class="object-contain shrink-0 vertical-center" />
+                              <p
+                                  style="width: 647px;"
+                                  id="response"
+                                  class="flex flex-col text-left py-4 bg-transparent rounded-2xl">
+                              </p>
                           </div>
-                        </div>
-                       </div>
-                  </section>
-                  </div>     
-                </nav>
-          </main>
-        </div>
-      </section>
-
+                          <style>
+                              .typing {
+                                  display: inline-block;
+                                  overflow: hidden; /* Ensures no overflow */
+                                  white-space: nowrap; /* Prevents text from wrapping */
+                                  border-right: .1em solid; /* Creates a cursor effect */
+                                  animation: blink-caret 0.75s step-end infinite; /* Cursor blinking effect */
+                              }
+              
+                              @keyframes blink-caret {
+                                  from,
+                                  to {
+                                      border-color: transparent;
+                                  }
+                                  50% {
+                                      border-color: black;
+                                  } /* Adjust the color to match your theme */
+                              }
+                          </style>
+              
+                          <!-- Here the third Section Starts -->
+                          <div class="flex mt-20 absolute bottom-0 gap-3 justify-center self-center py-3 w-full"> <!-- Changed to absolute -->
+                              <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
+                                  <div class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full md:mb-0">
+                                      <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
+                                      <input id="query" type="text" placeholder="Type your message in over 100 languages..."
+                                          class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4 max-md:max-w-full" />
+                                      <button id="send" type="submit"
+                                          class="ml-2 gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                                          Send
+                                      </button>
+                                  </div>
+                                  <p class="self-center mt-20 md:mt-5 pt-20 md:pt-0 mt-5 text-xs leading-snug text-center max-md:max-w-full">
+                                      Our AI offers guidance but is not a substitute for professional therapy or medical advice.
+                                      <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+                                  </p>
+                              </div>
+                          </div>
+                      </section>
+                  </div>
+              </section>
+              
 
 
       
