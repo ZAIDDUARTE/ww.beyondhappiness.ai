@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <style>
+        body {
+           background-image: url(/assests/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
+           background-size: cover;
+           background-position: center;
+           overflow-y: hidden;
+        }
+      </style>
+    
+        <section class="flex overflow-hidden flex-col">
+            <div class="flex relative flex-col pb-5 w-full min-h-[1024px] max-md:max-w-full">
+              <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
+                <div class="flex py-5 px-5 flex-wrap gap-10 justify-between items-center  max-md:max-w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[129px]" />
+                  <nav class="flex me-5  gap-2.5 items-center self-stretch my-auto min-w-[240px]">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Navigation Icon" class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]" />
+                    <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid">
+                      Upgrade
+                    </button>
+                    
+                    
+                       <!-- User Menu Button -->
+      <div class="relative">
+        <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[46px]" aria-label="User Menu">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-5 aspect-square" />
+        </button>
+    
+        <!-- Dropdown Menu -->
+        <div style="z-index: 1;" id="userDropdown" class="hidden absolute right-0 mt-5 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+          <nav class="flex flex-col p-2 bg-white rounded-lg shadow-lg max-w-[240px]">
+            <button id="settingsBtn" class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4336a7f3bbe0a9b419bf3651a67458a3c65af3432e98a7c6fded1d0aadc8a931?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Settings</span>
+            </button>
+            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe05ebcc47725b314cc87cd0601a76f25ddc081b1ec2384af7966c3841d029e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Help & Support</span>
+            </button>
+            <button class="flex gap-2 items-center p-2 mt-1 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2b7e60d17d50e34fc087ab60f74002863fc61ac11389e287b342df36e1d0a52?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Feedback</span>
+            </button>
+            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b9474ffe132ce66aabb558807168c3c0273b8314750849210b4af8e0f1f89ad?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Log Out</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    
+      <!-- JavaScript to toggle dropdown -->
+      <script>
+        const userMenuButton = document.getElementById('userMenuButton');
+        const userDropdown = document.getElementById('userDropdown');
+    
+        // Toggle dropdown visibility
+        userMenuButton.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevents the event from bubbling up
+          userDropdown.classList.toggle('hidden');
+        });
+    
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function (event) {
+          if (!userMenuButton.contains(event.target) && !userDropdown.contains(event.target)) {
+            userDropdown.classList.add('hidden');
+          }
+        });
+      </script>
+                    
+      
+                  </nav>
+                </div>
+              </header>
+
+
+
+          
+              <main class="flex relative border rounded-2xl flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full h-[700px] max-h-[800px] overflow-y-auto">
+
+
+
+
+                <section class="flex flex-col grow shrink-0 items-center px-20 bg-gray-50 border rounded-2xl basis-0 w-fit max-md:px-5 max-md:max-w-full  ">
+                    <div  class="flex flex-col w-full max-w-[1244px] max-md:max-w-full mx-auto">
+                      <section id="chatContainer"
+    class="flex flex-col  w-full text-base text-gray-900 max-md:pt-24 max-md:max-w-full"
+    >
+                    
+                    
+                        <!-- Bot Message (Left Aligned) -->
+<div class="flex gap-5 items-left self-left my-8 w-full max-md:max-w-full">
+  <img
+      style="width: 46px; height: 46px;"
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+      alt="AI avatar"
+      class="object-contain shrink-0 vertical-center"
+  />
+  <p
+      style="width: 647px;"
+      id="response"
+      class="flex flex-col text-left py-4 bg-transparent rounded-2xl"
+  >
+  </p>
+</div>
+<style>.typing {
+  display: inline-block;
+  overflow: hidden; /* Ensures no overflow */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: .1em solid; /* Creates a cursor effect */
+  animation: blink-caret 0.75s step-end infinite; /* Cursor blinking effect */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; } /* Adjust the color to match your theme */
+}
+</style>
+                    
+                      
+                          
+               
+                  
+               
+                         <!-- Here the third Section Starts -->
+                         <div class="flex mt-20 pt-80  gap-3 justify-center self-center py-3 w-full ">
+                          <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
+                            <div class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full md:mb-0">
+                              <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
+                              <input  id="query" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
+                              <button id="send" type="submit" class="ml-2 gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                                Send
+                            </button>
+                             
+                            </div>
+                            <p class="self-center mt-20 md:mt-5 pt-20 md:pt-0 mt-5 text-xs leading-snug text-center  max-md:max-w-full">
+                              Our Al offers guidance but is not a substitute for professional therapy or medical advice.
+                              <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+                            </p>
+                          </div>
+                        </div>
+                       </div>
+                  </section>
+                  </div>     
+                </nav>
+          </main>
+        </div>
+      </section>
+
+
+
+      
+      <script>
+        const sendButton = document.getElementById('send');
+        const userMessageInput = document.getElementById('query'); // Using ID 'query'
+        const chatContainer = document.getElementById('chatContainer');
+    
+        sendButton.addEventListener('click', async () => {
+            const userMessage = userMessageInput.value.trim();
+            if (userMessage) {
+                // Append user message to chat at the top
+                appendMessage('user', userMessage);
+                userMessageInput.value = ''; // Clear input field
+    
+                // Show "Let me think..." message while waiting for the response
+                const thinkingMessageContainer = appendMessage('bot', 'Let me think...');
+                
+                // Fetch response from backend
+                await fetchResponse(userMessage, thinkingMessageContainer);
+            }
+        });
+    
+        function appendMessage(sender, message) {
+            const messageContainer = document.createElement('div');
+            messageContainer.className = `flex gap-5 items-${sender === 'user' ? 'right' : 'left'} justify-${sender === 'user' ? 'end' : 'start'} self-${sender === 'user' ? 'right' : 'left'} my-8 w-full max-md:max-w-full`;
+    
+            if (sender === 'user') {
+                messageContainer.innerHTML = `
+                    <p class="flex px-5 flex-col text-right py-4 bg-gray-100 rounded-2xl">${message}</p>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="User avatar" class="object-contain w-12 h-12 shrink-0"/>
+                `;
+            } else {
+                // Updated structure for the bot's message
+                messageContainer.innerHTML = `
+                    <div class="flex gap-5 items-left self-left w-full max-md:max-w-full">
+                        <img style="width: 46px; height: 46px;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c69b8c50c018b173d39932fcb154ef484c324f403d4aa734c15943f5ec7efa4?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="AI avatar" class="object-contain shrink-0 vertical-center" />
+                        <p style="width: 647px;" class="flex flex-col text-left py-4 bg-transparent rounded-2xl typing" id="response"></p>
+                    </div>
+                `;
+            }
+    
+            // Prepend the message container to ensure user messages are above bot messages
+            chatContainer.prepend(messageContainer);
+            chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom
+    
+            return messageContainer; // Return the message container for future reference
+        }
+    
+        async function fetchResponse(query, thinkingMessageContainer) {
+            try {
+                const response = await fetch('http://localhost:3000/api/request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query })
+                });
+    
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+    
+                const data = await response.json();
+                // Remove the "Let me think..." message
+                thinkingMessageContainer.remove();
+                // Append bot response with typing effect
+                typeWriterEffect(data.response || 'No response content available.');
+            } catch (error) {
+                // Remove the "Let me think..." message
+                thinkingMessageContainer.remove();
+                appendMessage('bot', `Error: ${error.message}`);
+            }
+        }
+    
+        function typeWriterEffect(message) {
+            const responseElement = document.getElementById('response');
+            responseElement.innerHTML = ''; // Clear previous content
+            let i = 0;
+    
+            function type() {
+                if (i < message.length) {
+                    responseElement.innerHTML += message.charAt(i);
+                    i++;
+                    setTimeout(type, 20); // Adjust typing speed here
+                }
+            }
+            
+            type(); // Start typing effect
+        }
+
+        
+    </script>
+    
+    
+</body>
+</html>
